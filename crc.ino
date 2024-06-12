@@ -63,8 +63,8 @@ void loop() {
         }
       }
     }
-    if (rr == 0x03 && h_s == 2) { h_s = 3; }
-    if (rr == 0x02 && h_s == 1) { h_s = 2; }
+    if (rr == 0x03 && h_s == 2) { h_s = 3; } else if (rr != 0x03 && h_s == 2){h_s = 0;}
+    if (rr == 0x02 && h_s == 1) { h_s = 2; } else if (rr != 0x02 && h_s == 1){h_s = 0;}
     if (rr == 0x01) { h_s = 1; }
   }
 }
